@@ -4,13 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>laravel Tutorials</title>
+    <title>This is home Blade php</title>
 </head>
 <body>
-    <div class="body">
-        <header>
-            <h2>This is Header Laravel Tutorials</h2>
-        </header>
-    </div>
+    <h1>
+        welcome, {{$name ?? "Guest"}}
+    </h1>
 </body>
 </html>

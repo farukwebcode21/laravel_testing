@@ -13,18 +13,42 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+/*
+
 Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/demo/{name}', function($name){
-    echo $name;
+Route::get('/demo', function(){
+    return view('demo');
 });
 
-// Route::get('/demo', function(){
-//     return view('demo');
-// });
+Route::get('/demo/{name}/{id?}', function($name, $id = null){
+    echo $name. '';
+    echo $id;
+});
+
 
 Route::get('test', function(){
     return "Welcome to test";
+});
+
+Route::any('/about', function(){
+    echo "Testing Route post";
+});
+
+*/
+
+// Route::put('users/{id}', function($id){
+
+// });
+
+// Route::patch();
+// Route::delete('users/{id}', function($id){
+
+// });
+
+Route::get('/{name?}', function($name = null){
+    $data = compact('name');
+    return view('home')->with($data); 
 });
